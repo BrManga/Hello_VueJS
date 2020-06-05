@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <h1>1. Hello World</h1>
+
+    <div id="app">
+        {{message}}
+    </div>
+    <h1>2. If Condition</h1>
+
+    <div id="app-2">
+        <span v-if="seen">
+            Seen is now true
+        </span>
+    </div>
+    <h1>3. Looping For</h1>
+    <div id="app-3">
+        <ol>
+            <li v-for="item in todos">
+                {{ item.text }}
+            </li>
+        </ol>
+    </div>
+    <h1>4. On Click Event and Method</h1>
+    <div id="app4">
+        <p>{{message}}</p>
+        <button v-on:click="reverseIt">Reverse It!!</button>
+    </div>
+    <h1>5. V-Model</h1>
+    <div id="app5">
+        <p>{{message}}</p>
+        <input type="text" v-model="message">
+    </div>
+    <script src="vue.js"></script>
+</body>
+
+</html>
