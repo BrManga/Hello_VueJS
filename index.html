@@ -39,6 +39,20 @@
         <p>{{message}}</p>
         <input type="text" v-model="message">
     </div>
+    <h1>5. Composing With Components</h1>
+    <div id="app6">
+        <ol>
+            <to-do></to-do>
+        </ol>
+    </div>
+    <h1>6. Create Components With Props</h1>
+    <div id="app7">
+        <ol>
+            <to-do1 v-for="item in groceryList" v-bind:todo1="item" v-bind:key="item.id">
+
+            </to-do1>
+        </ol>
+    </div>
     <script src="vue.js"></script>
 </body>
 
