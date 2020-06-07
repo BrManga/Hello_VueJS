@@ -62,3 +62,9 @@ var app8 = new Vue({
         blogLink: "<a href='https://www.bing.com'>Bing</a>"
     }
 })
+var app9 = new Vue({
+    el: '#app9',
+    data: {
+        Counter: 0
+    }
+})
