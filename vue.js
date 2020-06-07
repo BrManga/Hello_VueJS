@@ -68,3 +68,45 @@ var app9 = new Vue({
         Counter: 0
     }
 })
+new Vue({
+    el: "#app10",
+    data: {
+        x: 0,
+        y: 0
+    },
+    methods: {
+        updateCoordinates: function (event) {
+            this.x = event.clientX;
+            this.y = event.clientY
+        }
+    }
+})
+new Vue({
+    el: "#app11",
+    data: {
+        x: 0,
+        y: 0
+    },
+    methods: {
+        updateCoordinates: function (event) {
+            this.x = event.clientX;
+            this.y = event.clientY
+        }
+    }
+})
+new Vue({
+    el: "#app12",
+    data: {
+        x: 0,
+        y: 0
+    },
+    methods: {
+        updateCoordinates: function (event) {
+            this.x = event.clientX;
+            this.y = event.clientY
+        },
+        showAlert: () => {
+            alert("Enter or Space key keyup event")
+        }
+    }
+})

@@ -39,13 +39,13 @@
         <p>{{message}}</p>
         <input type="text" v-model="message">
     </div>
-    <h1>5. Composing With Components</h1>
+    <h1>6. Composing With Components</h1>
     <div id="app6">
         <ol>
             <to-do></to-do>
         </ol>
     </div>
-    <h1>6. Create Components With Props</h1>
+    <h1>7. Create Components With Props</h1>
     <div id="app7">
         <ol>
             <to-do1 v-for="item in groceryList" v-bind:todo1="item" v-bind:key="item.id">
@@ -53,16 +53,30 @@
             </to-do1>
         </ol>
     </div>
-    <h1>7. Binding Attribute</h1>
+    <h1>8. Binding Attribute</h1>
     <div id="app8">
         <a v-bind:href="link">Google</a>
         <p v-html="blogLink">Blog</p>
     </div>
-    <h1>8. Counter</h1>
+    <h1>9. Counter</h1>
     <div id="app9">
         <p>{{Counter}}</p>
         <button v-on:click="Counter++">Up</button>
         <button v-on:click="Counter--">Down</button>
+    </div>
+    <h1>10.Catching Events</h1>
+    <div id="app10">
+        <p v-on:mousemove="updateCoordinates">Coordinates:{{x}}, {{y}}</p>
+    </div>
+    <h1>11.Modifier</h1>
+    <div id="app11">
+        <!-- Stop provides us the functions not to work in designated part -->
+        <p v-on:mousemove="updateCoordinates">Coordinates:{{x}}, {{y}} <span v-on:mousemove.stop>Secret Part</span></p>
+    </div>
+    <h1>12.Keyboard Events</h1>
+    <div id="app12">
+        <p v-on:mousemove="updateCoordinates">Coordinates:{{x}}, {{y}} <span v-on:mousemove.stop>Secret Part</span></p>
+        <input type="text" v-on:keyup.enter.space="showAlert">
     </div>
     <script src="vue.js"></script>
 </body>
