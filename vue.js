@@ -55,3 +55,10 @@ var app7 = new Vue({
         groceryList: [{ id: 1, text: "Shampoo" }, { id: 2, text: "Bread" }, { id: 3, text: "Apple" }]
     }
 })
+var app8 = new Vue({
+    el: '#app8',
+    data: {
+        link: "https://www.google.com",
+        blogLink: "<a href='https://www.bing.com'>Bing</a>"
+    }
+})
