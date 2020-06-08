@@ -75,8 +75,14 @@
     </div>
     <h1>12.Keyboard Events</h1>
     <div id="app12">
-        <p v-on:mousemove="updateCoordinates">Coordinates:{{x}}, {{y}} <span v-on:mousemove.stop>Secret Part</span></p>
-        <input type="text" v-on:keyup.enter.space="showAlert">
+        <p v-on:mousemove="updateCoordinates">Coordinates:{{x}}, {{y}} </p>
+        <input type="text" placeholder="Enter to ALERT" v-on:keyup.enter.space="showAlert">
+    </div>
+    <h1>13.Computed PERFORMANCE</h1>
+    <!-- Will the output function called one time. PERFORMANCE -->
+    <div id="app13">
+        <button v-on:click="counter++">output will be called just on change of counter</button>
+        <p>counter:{{output}}</p>
     </div>
     <script src="vue.js"></script>
 </body>

@@ -110,3 +110,18 @@ new Vue({
         }
     }
 })
+new Vue({
+    el: "#app13",
+    data: {
+        counter: 0
+    },
+    computed: {
+        output: function () {
+            console.log("called output")
+            return this.counter
+        },
+        showAlert: () => {
+            alert("Enter or Space key keyup event")
+        }
+    }
+})
