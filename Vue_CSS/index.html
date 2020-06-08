@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="css1">
+        <!-- Normal way -->
+        <div class="box" @click="active=!active" :class="{yellow:active,blue:!active }"></div>
+        <div class="box" @click="active=!active" :class="{yellow:!active,blue:active }"></div>
+        <!-- With Computed Shorter Way -->
+        <div class="box" @click="active=!active" :class="divClass"></div>
+        <!-- Bring the color from Input -->
+        <div class="box" @click="active=!active" :class="color"></div>
+        <!-- Giving more than one classes -->
+        <div class="box" @click="active=!active" :class="[color, {yellow:active}]"></div>
+
+        <hr>
+        <input type="text" placeholder="yellow, green or blue" v-model="color">
+    </div>
+    <hr>
+    <hr>
+
+    <!-- Inline Style -->
+    <div id="css2">
+        <div class="box" :style="{backgroundColor:color}"></div>
+        <!-- Doing it with computed -->
+        <div class="box" :style="customStyle"></div>
+        <!-- Computed, multiclasses -->
+        <div class="box" :style="[customStyle, {width:height*2+'px'}]"></div>
+        <hr>
+        <p>Color</p>
+        <input type="text" placeholder="yellow, green or blue" v-model="color">
+        <p>Height the Middle, Height,Width the Last</p>
+        <input type="text" placeholder="height" v-model="height">
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
