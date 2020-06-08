@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- V-IF //  V-ELSE  // V-ELSE-IF -->
+        <p v-if="!show">You Can See Me</p>
+        <p v-else>You Can Not See Me</p>
+        <button @click="show=!show">Show/Hide</button>
+        <hr>
+        <p>Number</p>
+        <input type="number" v-model="number">
+        <p v-if="number<10">Number is smaller than 10</p>
+        <p v-else-if="number>10">Number is bigger than 10</p>
+        <p v-else>Number is equal to 10</p>
+        <hr>
+        <!-- V-SHOW -->
+        <!-- V-show just hides with if-else we remove it-->
+        <button @click="showParag=!showParag">Show/Hide</button>
+        <p v-show="showParag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ullam animi deleniti
+            facere quaerat ad
+            sint molestiae reiciendis dignissimos maxime!</p>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
