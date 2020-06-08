@@ -23,12 +23,28 @@
         <p v-else>Number is equal to 10</p>
         <hr>
         <!-- V-SHOW -->
-        <!-- V-show just hides with if-else we remove it-->
+        <!-- V-show just hides with if-else we remove it, v-show adds hide to style-->
         <button @click="showParag=!showParag">Show/Hide</button>
         <p v-show="showParag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ullam animi deleniti
             facere quaerat ad
             sint molestiae reiciendis dignissimos maxime!</p>
-
+        <hr>
+        <!-- V-FOR (index, key,value) AND USE KEY TO LOOPS-->
+        <ul>
+            <li v-for="(item, index) in products" :key="item">{{index}}-{{item}}</li>
+        </ul>
+        <!-- ADD A PRODUCT WITH BUTTON CLICK  -->
+        <button @click="products.push('Table')">ADD PRODUCT</button>
+        <div v-for="(item,index) in persons">
+            <h2 v-for="(value, key, index) in item">INDEX:{{index}}- KEY:{{key}} - VALUE:{{value}}</h2>
+            <hr>
+            <h2>Index:{{index}}</h2>
+            <h2>Name: {{item.name}}</h2>
+            <h3>Email {{item.email}}</h2>
+                <hr>
+        </div>
+        <!-- Restricting loop number -->
+        <span v-for="i in 5">{{i}}</span>
     </div>
     <script src="app.js"></script>
 </body>
