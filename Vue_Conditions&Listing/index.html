@@ -45,6 +45,13 @@
         </div>
         <!-- Restricting loop number -->
         <span v-for="i in 5">{{i}}</span>
+        <!-- Using Ref, reaching it from js file -->
+        <hr>
+        <button ref="MyButton">Button With Ref</button>
+        <!-- Using String Template and $mount-->
+        <div class="forTemplate"></div>
+        <!-- A simple Component -->
+        <hello></hello>
     </div>
     <script src="app.js"></script>
 </body>
